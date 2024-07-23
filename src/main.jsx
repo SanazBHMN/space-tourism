@@ -17,9 +17,23 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="/" element={<HomePage />} />
-      <Route path="/destination" element={<DestinationPage />} />
-      <Route path="/crew" element={<CrewPage />} />
-      <Route path="/technology" element={<TechnologyPage />} />
+      <Route path="/destination" element={<DestinationPage />}>
+        <Route path="moon" />
+        <Route path="mars" />
+        <Route path="europa" />
+        <Route path="titan" />
+      </Route>
+      <Route path="/crew" element={<CrewPage />}>
+        <Route path="douglas-hurley" />
+        <Route path="mark-shuttleworth" />
+        <Route path="victor-glover" />
+        <Route path="anousheh-ansari" />
+      </Route>
+      <Route path="/technology" element={<TechnologyPage />}>
+        <Route path="launch-vehicle" />
+        <Route path="spaceport" />
+        <Route path="space-capsule" />
+      </Route>
     </Route>
   )
 );
