@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 
-function DestinationPage() {
+function DestinationBase() {
   return (
     <div>
       <h1>01 PICK YOUR DESTINATION</h1>
@@ -23,4 +23,4 @@ function DestinationPage() {
   );
 }
 
-export default DestinationPage;
+export default DestinationBase;

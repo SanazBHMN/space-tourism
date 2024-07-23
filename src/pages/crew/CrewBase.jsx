@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 
-function CrewPage() {
+function CrewBase() {
   return (
     <div>
       <h1>02 MEET YOUR CREW</h1>
@@ -23,4 +23,4 @@ function CrewPage() {
   );
 }
 
-export default CrewPage;
+export default CrewBase;

@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 
-function TechnologyPage() {
+function TechnologyBase() {
   return (
     <div>
       <h1>03 SPACE LAUNCH 101</h1>
@@ -20,4 +20,4 @@ function TechnologyPage() {
   );
 }
 
-export default TechnologyPage;
+export default TechnologyBase;
