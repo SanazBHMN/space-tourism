@@ -1,23 +1,14 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import InnerNavbar from "../../components/InnerNavbar";
+
+import { crews } from "../../../utils/data.json";
 
 function CrewBase() {
+  const TITLE = "02 MEET YOUR CREW";
+
   return (
     <div>
-      <h1>02 MEET YOUR CREW</h1>
-      <ul>
-        <li>
-          <Link to="douglas-hurley">douglas-hurley</Link>
-        </li>
-        <li>
-          <Link to="mark-shuttleworth">mark-shuttleworth</Link>
-        </li>
-        <li>
-          <Link to="victor-glover">victor-glover</Link>
-        </li>
-        <li>
-          <Link to="anousheh-ansari">anousheh-ansari</Link>
-        </li>
-      </ul>
+      <InnerNavbar innerLinks={crews} title={TITLE} />
       <Outlet />
     </div>
   );

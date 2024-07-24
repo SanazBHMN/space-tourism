@@ -1,23 +1,14 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import InnerNavbar from "../../components/InnerNavbar";
+
+import { destinations } from "../../../utils/data.json";
 
 function DestinationBase() {
+  const TITLE = "01 PICK YOUR DESTINATION";
+
   return (
     <div>
-      <h1>01 PICK YOUR DESTINATION</h1>
-      <ul>
-        <li>
-          <Link to="moon">MOON</Link>
-        </li>
-        <li>
-          <Link to="mars">MARS</Link>
-        </li>
-        <li>
-          <Link to="europa">EUROPA</Link>
-        </li>
-        <li>
-          <Link to="titan">TITAN</Link>
-        </li>
-      </ul>
+      <InnerNavbar innerLinks={destinations} title={TITLE} />
       <Outlet />
     </div>
   );

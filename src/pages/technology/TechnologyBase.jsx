@@ -1,20 +1,14 @@
 import { Link, Outlet } from "react-router-dom";
 
+import { technologies } from "../../../utils/data.json";
+import InnerNavbar from "../../components/InnerNavbar";
+
 function TechnologyBase() {
+  const TITLE = "03 SPACE LAUNCH 101";
+
   return (
     <div>
-      <h1>03 SPACE LAUNCH 101</h1>
-      <ul>
-        <li>
-          <Link to="launch-vehicle">launch-vehicle</Link>
-        </li>
-        <li>
-          <Link to="spaceport">spaceport</Link>
-        </li>
-        <li>
-          <Link to="space-capsule">space-capsule</Link>
-        </li>
-      </ul>
+      <InnerNavbar innerLinks={technologies} title={TITLE} />
       <Outlet />
     </div>
   );
