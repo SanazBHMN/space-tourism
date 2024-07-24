@@ -1,12 +1,12 @@
-// import "./App.css";
-
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
+
+// static imports
 import "./App.scss";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar />
       <Outlet />
     </div>

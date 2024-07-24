@@ -1,0 +1,38 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  .menu {
+    cursor: pointer;
+  }
+  ul {
+    display: none;
+    justify-content: space-between;
+    padding: 2rem 6rem;
+    // max-width: 720px;
+    background-color: rgb(106, 94, 94);
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    .menu {
+      display: none;
+    }
+    ul {
+      display: flex;
+      order: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  nav {
+    padding-right: 0;
+    ul {
+      width: 820px;
+    }
+  }
+}

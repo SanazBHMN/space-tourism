@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
 
+// static imports
+import hamburgerIcon from "../assets/icons/icon-hamburger.svg";
+import logo from "../assets/icons/logo.svg";
+import "./navbar.scss";
+
 function Navbar() {
   return (
     <nav>
@@ -17,8 +22,14 @@ function Navbar() {
           <Link to="/technology">03 Technology</Link>
         </li>
       </ul>
+      <div className="logo">
+        <img src={logo} alt="logo" />
+      </div>
+      <div className="menu">
+        <img src={hamburgerIcon} />
+      </div>
     </nav>
   );
 }
 
-export default Navbar; 
+export default Navbar;
