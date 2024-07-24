@@ -15,7 +15,7 @@ import CrewBase from "./pages/crew/CrewBase.jsx";
 import CrewPage from "./pages/crew/CrewPage.jsx";
 import TechnologyBase from "./pages/technology/TechnologyBase.jsx";
 import TechnologyPage from "./pages/technology/TechnologyPage.jsx";
-// import "./index.css";
+import "./index.scss";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
