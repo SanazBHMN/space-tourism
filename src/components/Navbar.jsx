@@ -25,6 +25,7 @@ function Navbar() {
       <div className="logo">
         <img src={logo} alt="logo" />
       </div>
+      <div className="navbar--line"></div>
       <div className="menu">
         <img src={hamburgerIcon} />
       </div>

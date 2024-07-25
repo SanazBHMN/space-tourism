@@ -1,3 +1,58 @@
 .homepage-container {
   height: 100vh;
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    .content {
+      max-width: 450px;
+      text-align: center;
+      .content__header {
+        text-transform: uppercase;
+        font-size: 1em;
+        span {
+          font-size: 5em;
+          font-weight: 200;
+          margin-top: 2rem;
+        }
+      }
+      .content__paragraph {
+        margin: 2rem 0;
+        padding: 0 1.5rem;
+        line-height: 1.8;
+      }
+    }
+  }
+  .cta {
+    background-color: white;
+    font-size: 1.5em;
+    color: black;
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .homepage-container {
+    main {
+      flex-direction: row;
+      .content {
+        text-align: left;
+        .content__paragraph {
+          padding-left: 0;
+        }
+      }
+    }
+    .cta {
+      width: 230px;
+      height: 230px;
+    }
+  }
 }

@@ -3,21 +3,32 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem 1rem;
+  position: relative;
   .menu {
     cursor: pointer;
   }
   ul {
     display: none;
     justify-content: space-between;
-    padding: 2rem 6rem;
+    padding: 3rem;
     // max-width: 720px;
     background-color: rgb(106, 94, 94);
     text-transform: uppercase;
+    gap: 1rem;
+  }
+  .navbar--line {
+    display: none;
+    width: 36rem;
+    height: 1px;
+    background: white;
+    // position: absolute;
+    left: 12rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   nav {
+    padding: 0 0 0 1rem;
     .menu {
       display: none;
     }
@@ -32,7 +43,10 @@ nav {
   nav {
     padding-right: 0;
     ul {
-      width: 820px;
+      width: 720px;
+    }
+    .navbar--line {
+      display: block;
     }
   }
 }
