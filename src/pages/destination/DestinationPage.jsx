@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import DestinationTemplate from "../../components/templates/DestinationTemplate";
 
+// import statics
 import data from "../../../utils/data.json";
 
 function DestinationPage() {
