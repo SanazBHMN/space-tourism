@@ -11,8 +11,6 @@ function DestinationPage() {
     (dest) => dest.name.toLowerCase() === name.toLowerCase()
   );
 
-  console.log(destination);
-
   return destination ? <DestinationTemplate destination={destination} /> : null;
 }
 

@@ -1,3 +1,53 @@
 .destination-container {
-  height: 100vh;
+  padding: 1rem;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 1.3em;
+  }
+  .content-container {
+    display: grid;
+    grid-gap: 3rem;
+    place-items: center;
+    margin-top: 3rem;
+    .content-img {
+      width: 300px;
+      img {
+        width: 100%;
+      }
+    }
+    .content {
+      text-align: center;
+      padding: 2rem 0;
+      &__title {
+        font-size: 5em;
+        font-weight: 200;
+        text-transform: uppercase;
+      }
+      &__description {
+        padding: 1rem 1rem 3rem 1rem;
+        border-bottom: 2px solid white;
+        line-height: 1.8;
+      }
+      .content--details {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1rem;
+        text-align: left;
+        text-transform: uppercase;
+        &__title {
+          font-size: 0.7em;
+        }
+        &__data {
+          margin-top: 0.6rem;
+        }
+      }
+    }
+  }
 }
