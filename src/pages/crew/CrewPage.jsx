@@ -5,7 +5,6 @@ import CrewTemplate from "../../components/templates/CrewTemplate";
 function CrewPage() {
   const { crews } = data;
   const { name } = useParams();
-  console.log(crews);
 
   const crew = crews.find(
     (crew) => crew.name.replace(/ +/g, "-").toLowerCase() === name

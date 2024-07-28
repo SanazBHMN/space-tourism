@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import InnerNavbar from "../../components/InnerNavbar";
+import Heading from "../../components/Heading";
 
 // import statics
 import "./technology-page.scss";
@@ -10,7 +11,8 @@ function TechnologyBase() {
 
   return (
     <div className="technology-container">
-      <InnerNavbar innerLinks={technologies} title={TITLE} />
+      <Heading title={TITLE} />
+      <InnerNavbar innerLinks={technologies} />
       <Outlet />
     </div>
   );

@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 
-function InnerNavbar({ innerLinks, title }) {
+function InnerNavbar({ innerLinks }) {
   return (
     <>
-      <h1>{title}</h1>
       <ul>
         {innerLinks.map((link, index) => (
           <li key={index}>

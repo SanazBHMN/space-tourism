@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import InnerNavbar from "../../components/InnerNavbar";
+import Heading from "../../components/Heading";
 
 // import statics
 import "./crew-page.scss";
@@ -10,8 +11,9 @@ function CrewBase() {
 
   return (
     <div className="crew-container">
-      <InnerNavbar innerLinks={crews} title={TITLE} />
+      <Heading title={TITLE} />
       <Outlet />
+      <InnerNavbar innerLinks={crews} />
     </div>
   );
 }
