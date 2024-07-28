@@ -13,7 +13,7 @@ function CrewBase() {
     <div className="crew-container">
       <Heading title={TITLE} />
       <Outlet />
-      <InnerNavbar innerLinks={crews} />
+      <InnerNavbar innerLinks={crews} componentName={"crew"} />
     </div>
   );
 }

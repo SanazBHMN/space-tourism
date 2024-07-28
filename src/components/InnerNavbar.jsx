@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
 
-function InnerNavbar({ innerLinks }) {
+// static imports
+import "./inner-navbar.scss";
+
+function InnerNavbar({ innerLinks, componentName }) {
   return (
     <>
-      <ul>
+      <ul className={`innerNav nav--${componentName}`}>
         {innerLinks.map((link, index) => (
-          <li key={index}>
+          <li key={index} className={`innerNav__item item--${componentName}`}>
             <Link to={link.name.replace(/ +/g, "-").toLowerCase()}>
-              {link.name.toUpperCase()}
+              {componentName === "destination"
+                ? link.name.toUpperCase()
+                : componentName === "crew"
+                ? "●"
+                : index + 1}
             </Link>
           </li>
         ))}

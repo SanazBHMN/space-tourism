@@ -1,0 +1,10 @@
+.innerNav {
+  &.nav--crew {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 1rem;
+    position: absolute;
+    bottom: 3rem;
+  }
+}
