@@ -34,7 +34,7 @@
         border-bottom: 2px solid white;
         line-height: 1.8;
       }
-      .content--details {
+      &--details {
         margin-top: 2rem;
         display: flex;
         justify-content: space-evenly;
@@ -46,6 +46,28 @@
         }
         &__data {
           margin-top: 0.6rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .destination-container {
+    height: 100vh;
+    .content-container {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 auto;
+      max-width: 1100px;
+      .content {
+        text-align: left;
+        max-width: 500px;
+        &__description {
+          padding-left: 0;
+        }
+        &--details {
+          justify-content: flex-start;
+          gap: 3rem;
         }
       }
     }
