@@ -12,8 +12,10 @@ function TechnologyBase() {
   return (
     <div className="technology-container">
       <Heading title={TITLE} />
-      <InnerNavbar innerLinks={technologies} componentName={"technology"} />
-      <Outlet />
+      <div className="technology--title">
+        <InnerNavbar innerLinks={technologies} componentName={"technology"} />
+        <Outlet />
+      </div>
     </div>
   );
 }
