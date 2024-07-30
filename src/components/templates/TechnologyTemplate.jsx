@@ -1,5 +1,9 @@
+import useSize from "../../hooks/useSize";
+
 function TechnologyTemplate({ technology }) {
   const { name, images, description } = technology;
+  const [windowWidth, windowHeight] = useSize();
+
   return (
     <main className="content-container">
       <div className="content">
@@ -7,15 +11,15 @@ function TechnologyTemplate({ technology }) {
         <p className="content--desc">{description}</p>
       </div>
       <div
-        className={`content-img bg-${name}`}
+        className={`content-img bg-portrait`}
         style={{
-          backgroundImage: `url(${images.portrait})`,
+          backgroundImage: `url(${
+            windowWidth < 768 ? images.portrait : images.landscape
+          })`,
           width: "300px",
           height: "300px",
         }}
-      >
-        {/* <img src={images.portrait} alt={name} /> */}
-      </div>
+      ></div>
     </main>
   );
 }
