@@ -7,19 +7,22 @@ function TechnologyTemplate({ technology }) {
   return (
     <main className="content-container">
       <div className="content">
-        <h1 className="content-title">{name}</h1>
-        <p className="content--desc">{description}</p>
+        <div>
+          <h5 className="content-heading">The technology...</h5>
+          <h1 className="content-title">{name}</h1>
+          <p className="content-desc">{description}</p>
+        </div>
+        <div className="content-img__container">
+          <div
+            className="content-img__img"
+            style={{
+              backgroundImage: `url(${
+                windowWidth < 768 ? images.landscape : images.portrait
+              })`,
+            }}
+          ></div>
+        </div>
       </div>
-      <div
-        className={`content-img bg-portrait`}
-        style={{
-          backgroundImage: `url(${
-            windowWidth < 768 ? images.portrait : images.landscape
-          })`,
-          width: "300px",
-          height: "300px",
-        }}
-      ></div>
     </main>
   );
 }
