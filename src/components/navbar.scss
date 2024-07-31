@@ -15,6 +15,10 @@ nav {
     background-color: rgb(106, 94, 94);
     text-transform: uppercase;
     gap: 1rem;
+    a.active {
+      border-bottom: 2px solid white;
+      padding-bottom: 3rem;
+    }
   }
   .navbar--line {
     display: none;

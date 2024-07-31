@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 // static imports
 import hamburgerIcon from "../assets/icons/icon-hamburger.svg";
@@ -10,16 +10,16 @@ function Navbar() {
     <nav>
       <ul>
         <li>
-          <Link to="/">00 Home</Link>
+          <NavLink to="/">00 Home</NavLink>
         </li>
         <li>
-          <Link to="/destination">01 Destination</Link>
+          <NavLink to="/destination">01 Destination</NavLink>
         </li>
         <li>
-          <Link to="/crew">02 Crew</Link>
+          <NavLink to="/crew">02 Crew</NavLink>
         </li>
         <li>
-          <Link to="/technology">03 Technology</Link>
+          <NavLink to="/technology">03 Technology</NavLink>
         </li>
       </ul>
       <div className="logo">
