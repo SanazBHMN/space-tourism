@@ -2,11 +2,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.7rem 1rem;
+  margin-bottom: 3rem;
   .navbar--line {
-    /* Add any styles needed for your navbar line */
   }
   nav {
     display: none;
+  }
+  button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
   }
   .menu {
     display: block;
@@ -30,8 +37,9 @@ header {
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   header {
+    padding: 0 0 0 1rem;
     nav {
       display: flex;
     }

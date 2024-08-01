@@ -33,15 +33,12 @@ function Header() {
           isOpen ? (
             <Drawer handleCloseDrawer={handleCloseDrawer} />
           ) : (
-            <img
-              src={hamburgerIcon}
-              className="menu"
-              alt="menu"
-              onClick={handleOpenDrawer}
-            />
+            <button onClick={handleOpenDrawer} className="menu">
+              <img src={hamburgerIcon} alt="menu" />
+            </button>
           )
         ) : (
-          <Navbar />
+          <Navbar windowWidth={windowWidth} />
         )}
       </header>
     </>

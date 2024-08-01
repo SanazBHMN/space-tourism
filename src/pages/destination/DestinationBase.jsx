@@ -11,9 +11,11 @@ function DestinationBase() {
 
   return (
     <div className="destination-container">
-      <Heading title={TITLE} />
-      <InnerNavbar innerLinks={destinations} componentName={"destination"} />
-      <Outlet />
+      <div className="container">
+        <Heading title={TITLE} />
+        <InnerNavbar innerLinks={destinations} componentName={"destination"} />
+        <Outlet />
+      </div>
     </div>
   );
 }
