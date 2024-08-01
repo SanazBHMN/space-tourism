@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import InnerNavbar from "../../components/InnerNavbar";
-import Heading from "../../components/Heading";
+import InnerNavbar from "../../components/inner-navbar/InnerNavbar";
+import Heading from "../../components/heading/Heading";
 
 // import statics
 import "./crew-page.scss";

@@ -1,8 +1,5 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-// static imports
-import hamburgerIcon from "../assets/icons/icon-hamburger.svg";
-import logo from "../assets/icons/logo.svg";
 import "./navbar.scss";
 
 function Navbar() {
@@ -22,13 +19,6 @@ function Navbar() {
           <NavLink to="/technology">03 Technology</NavLink>
         </li>
       </ul>
-      <div className="logo">
-        <img src={logo} alt="logo" />
-      </div>
-      <div className="navbar--line"></div>
-      <div className="menu">
-        <img src={hamburgerIcon} />
-      </div>
     </nav>
   );
 }

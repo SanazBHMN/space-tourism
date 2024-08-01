@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Header from "./components/header/Header";
 
 // static imports
 import "./App.scss";
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className={`App bg bgImage-${url}`}>
-      <Navbar />
+      <Header />
       <Outlet />
     </div>
   );
