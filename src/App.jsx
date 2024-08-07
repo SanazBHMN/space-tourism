@@ -17,7 +17,9 @@ function App() {
   return (
     <div className={`App bg bgImage-${url}`}>
       <Header />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
 }

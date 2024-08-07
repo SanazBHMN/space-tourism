@@ -1,8 +1,12 @@
+@import "./styles/fonts";
+@import "./styles/colors";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+  font-family: map-get($fonts, "Barlow");
+  color: map-get($colors, "white");
 }
 
 body {

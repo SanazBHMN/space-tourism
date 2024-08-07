@@ -1,58 +1,83 @@
+@import "../styles/fonts";
+@import "../styles/colors";
+
+@mixin blue-text {
+  color: map-get($colors, "blue-300");
+}
+
 .homepage-container {
   height: 100vh;
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-
-    .content {
-      max-width: 450px;
-      text-align: center;
-      .content__header {
-        text-transform: uppercase;
-        font-size: 1em;
-        span {
-          font-size: 5em;
-          font-weight: 200;
-          margin-top: 2rem;
-        }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .content {
+    max-width: 450px;
+    text-align: center;
+    &--header {
+      @include blue-text;
+      text-transform: uppercase;
+      font-size: 1em;
+      &__text {
+        @include blue-text;
       }
-      .content__paragraph {
-        margin: 2rem 0;
-        padding: 0 1.5rem;
-        line-height: 1.8;
+      &__word {
+        color: map-get($colors, "white");
+        font-family: map-get($fonts, "Bellefair");
+        font-size: 6em;
+        font-weight: 100;
       }
+    }
+    &__paragraph {
+      @include blue-text;
+      margin: 2rem 0;
+      padding: 0 1.5rem;
+      line-height: 1.8;
     }
   }
   .cta {
-    background-color: white;
+    background-color: map-get($colors, "white");
+    font-family: map-get($fonts, "Bellefair");
     font-size: 1.5em;
     color: black;
     width: 144px;
     height: 144px;
     border-radius: 50%;
+    border: none;
     display: grid;
     place-items: center;
     text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .homepage-container {
+    .content {
+      &--header {
+        &__text {
+          font-size: 1.4em;
+        }
+        &__word {
+          font-size: 9em;
+        }
+      }
+    }
+    .cta {
+      width: 272px;
+      height: 272px;
+    }
   }
 }
 
 @media screen and (min-width: 1024px) {
   .homepage-container {
-    main {
-      flex-direction: row;
-      .content {
-        text-align: left;
-        .content__paragraph {
-          padding-left: 0;
-        }
+    flex-direction: row;
+    .content {
+      text-align: left;
+      .content__paragraph {
+        padding-left: 0;
       }
-    }
-    .cta {
-      width: 230px;
-      height: 230px;
     }
   }
 }

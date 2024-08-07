@@ -10,47 +10,45 @@ nav {
   ul {
     display: none;
     justify-content: space-between;
-    padding: 3rem;
-    // max-width: 720px;
-    background-color: rgb(106, 94, 94);
+    padding: 2.4rem;
+    background-color: rgba(255, 255, 255, 5%);
     text-transform: uppercase;
     gap: 1rem;
+    a {
+      span {
+        font-weight: bold;
+        margin-right: 0.75rem;
+        letter-spacing: 2px;
+      }
+    }
     a.active {
       border-bottom: 2px solid white;
-      padding-bottom: 3rem;
+      padding-bottom: 2.4rem;
     }
-  }
-  .navbar--line {
-    display: none;
-    width: 36rem;
-    height: 1px;
-    background: white;
-    // position: absolute;
-    left: 12rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   nav {
-    padding: 0 0 0 1rem;
+    padding: 0;
     .menu {
       display: none;
     }
     ul {
       display: flex;
       order: 1;
+      width: 600px;
+      padding-left: 7rem;
     }
   }
 }
 
 @media screen and (min-width: 1024px) {
   nav {
+    padding-top: 0;
     padding-right: 0;
     ul {
-      width: 720px;
-    }
-    .navbar--line {
-      display: block;
+      width: 736px;
     }
   }
 }

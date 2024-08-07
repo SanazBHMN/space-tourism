@@ -15,6 +15,7 @@ function Header() {
   const [windowWidth] = useSize();
 
   const isMobile = windowWidth < 769;
+  const isDesktop = windowWidth > 1440;
 
   const handleOpenDrawer = () => {
     setIsOpen(true);
@@ -28,7 +29,7 @@ function Header() {
     <>
       <header>
         <img src={logo} alt="logo" />
-        <div className="navbar--line"></div>
+        {isDesktop && <div className="navbar--line"></div>}
         {isMobile ? (
           isOpen ? (
             <Drawer handleCloseDrawer={handleCloseDrawer} />

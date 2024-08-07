@@ -2,9 +2,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 1rem;
-  margin-bottom: 3rem;
   .navbar--line {
+    height: 1px;
+    max-width: 560px;
+    margin-right: -10rem;
+    background: #979797;
+    flex: 1;
   }
   nav {
     display: none;
@@ -37,7 +40,7 @@ header {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   header {
     padding: 0 0 0 1rem;
     nav {

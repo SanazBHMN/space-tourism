@@ -7,12 +7,15 @@ import "./destination-page.scss";
 import { destinations } from "../../../utils/data.json";
 
 function DestinationBase() {
-  const TITLE = "01 PICK YOUR DESTINATION";
+  const title = {
+    pre: "01",
+    text: "PICK YOUR DESTINATION",
+  };
 
   return (
     <div className="destination-container">
       <div className="container">
-        <Heading title={TITLE} />
+        <Heading title={title} />
         <InnerNavbar innerLinks={destinations} componentName={"destination"} />
         <Outlet />
       </div>

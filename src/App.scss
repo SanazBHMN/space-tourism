@@ -2,6 +2,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 1.5rem;
   &.bg {
     &Image-home {
       background-image: url("./assets/home/background-home-mobile.jpg");
@@ -20,6 +21,8 @@
 
 @media screen and (min-width: 768px) {
   .App {
+    padding-top: 0;
+    padding-right: 0;
     &.bg {
       &Image-home {
         background-image: url("./assets/home/background-home-tablet.jpg");
@@ -35,10 +38,14 @@
       }
     }
   }
+  main {
+    margin: 8rem 2.5rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .App {
+    padding-top: 2.5rem;
     &.bg {
       &Image-home {
         background-image: url("./assets/home/background-home-desktop.jpg");

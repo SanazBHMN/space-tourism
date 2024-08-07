@@ -7,19 +7,23 @@ function Navbar({ windowWidth }) {
     <nav>
       <ul>
         <li>
-          <NavLink to="/">{windowWidth > 1024 && "00"} Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/destination">
-            {windowWidth > 1024 && "01"} Destination
+          <NavLink to="/">
+            <span>00</span> Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/crew">{windowWidth > 1024 && "02"} Crew</NavLink>
+          <NavLink to="/destination">
+            <span>01</span> Destination
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/crew">
+            <span>02</span> Crew
+          </NavLink>
         </li>
         <li>
           <NavLink to="/technology">
-            {windowWidth > 1024 && "03"} Technology
+            <span>03</span> Technology
           </NavLink>
         </li>
       </ul>
