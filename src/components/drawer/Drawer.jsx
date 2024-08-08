@@ -6,7 +6,7 @@ import "./drawer.scss";
 function Drawer({ handleCloseDrawer }) {
   return (
     <div className="drawer">
-      <button onClick={handleCloseDrawer}>
+      <button onClick={handleCloseDrawer} className="drawer--close-button">
         <img src={closeIcon} alt="close" />
       </button>
       <Navbar />
