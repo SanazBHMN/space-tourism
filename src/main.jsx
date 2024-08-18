@@ -21,15 +21,15 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="/" element={<HomePage />} />
-      <Route path="/destination" element={<DestinationBase />}>
+      <Route path="destination" element={<DestinationBase />}>
         <Route index element={<Navigate to="moon" replace />} />
         <Route path=":name" element={<DestinationPage />} />
       </Route>
-      <Route path="/crew" element={<CrewBase />}>
+      <Route path="crew" element={<CrewBase />}>
         <Route index element={<Navigate to="douglas-hurley" replace />} />
         <Route path=":name" element={<CrewPage />} />
       </Route>
-      <Route path="/technology" element={<TechnologyBase />}>
+      <Route path="technology" element={<TechnologyBase />}>
         <Route index element={<Navigate to="launch-vehicle" replace />} />
         <Route path=":name" element={<TechnologyPage />} />
       </Route>

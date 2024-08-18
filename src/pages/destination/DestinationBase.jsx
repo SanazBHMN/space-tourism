@@ -1,10 +1,15 @@
+import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
-import InnerNavbar from "../../components/inner-navbar/InnerNavbar";
+
+// import components
 import Heading from "../../components/heading/Heading";
+import InnerLink from "../../components/inner-navbar/InnerLink";
 
 // import statics
-import "./destination-page.scss";
 import { destinations } from "../../../utils/data.json";
+
+// import styles
+import "./destination-page.scss";
 
 function DestinationBase() {
   const title = {
@@ -16,7 +21,13 @@ function DestinationBase() {
     <div className="destination-container">
       <div className="container">
         <Heading title={title} />
-        <InnerNavbar innerLinks={destinations} componentName={"destination"} />
+        <ul className="destination--innerNav">
+          {destinations.map((destination) => (
+            <Fragment key={destination.name}>
+              <InnerLink link={destination.name} />
+            </Fragment>
+          ))}
+        </ul>
         <Outlet />
       </div>
     </div>

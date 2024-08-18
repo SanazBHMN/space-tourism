@@ -15,10 +15,12 @@ function DestinationPage() {
   const destination = destinations?.find(
     (destination) => destination.name.toLowerCase() === name.toLowerCase()
   );
+
+  // console.log(destination);
   return (
     <div className="content-container">
       <div className="content-img">
-        <img src={destination?.images.webp} alt={destination?.name} />
+        <img src={destination?.images.png} alt={destination?.name} />
       </div>
       <div className="content">
         <h1 className="content__title">{destination?.name}</h1>
