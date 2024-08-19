@@ -24,7 +24,7 @@ function DestinationBase() {
         <ul className="destination--innerNav">
           {destinations.map((destination) => (
             <Fragment key={destination.name}>
-              <InnerLink link={destination.name} />
+              <InnerLink link={destination.name} pageName="destination" />
             </Fragment>
           ))}
         </ul>

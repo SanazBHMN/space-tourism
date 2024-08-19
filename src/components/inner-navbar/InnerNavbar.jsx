@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 // static imports
-import "./inner-navbar.scss";
+// import "./inner-navbar.scss";
 
 function InnerNavbar({ innerLinks, componentName }) {
   return (

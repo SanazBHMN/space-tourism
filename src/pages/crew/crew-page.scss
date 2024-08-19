@@ -1,65 +1,118 @@
+@import "../../styles/colors";
+@import "../../styles//fonts";
+
 .crew-container {
-  padding: 1rem 1rem 0 1rem;
-  .innerNav {
-    &__item {
-      a {
-        color: rgb(62, 58, 58);
-        &.active {
-          color: white;
+  padding: 1rem;
+  max-width: 750px;
+  margin: 0 auto;
+  .container {
+    .crew--innerNav {
+      max-width: max-content;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.5rem auto;
+      li {
+        a {
+          color: rgb(62, 58, 58);
+        }
+        a.active {
+          color: map-get($colors, "white");
         }
       }
     }
-  }
-  .content-container {
-    display: grid;
-    grid-gap: 3rem;
-    place-items: center;
-  }
-  .content {
-    text-align: left;
-    margin-top: 3rem;
-    &-img {
-      width: 300px;
-      margin: 0 auto;
-      img {
-        width: 100%;
+    .headline {
+      font-size: 1.3em;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-align: center;
+      span {
+        font-weight: bold;
+        margin-right: 1.5rem;
+        color: gray;
       }
     }
-    &__role {
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-      font-weight: 200;
+    .content-container {
+      display: grid;
+      grid-gap: 2rem;
+      place-items: center;
+      margin-top: 3rem;
     }
-    &__name {
-      text-transform: uppercase;
-      font-weight: 200;
-      font-size: 2em;
-    }
-    &__bio {
+    .content {
       text-align: center;
-      margin-top: 2rem;
-      line-height: 1.8;
+      padding: 2rem 0;
+      &-img {
+        width: 300px;
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
+      }
+      &__role {
+        font-family: map-get($fonts, "Bellefair");
+        color: gray;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        font-weight: 200;
+      }
+      &__name {
+        font-family: map-get($fonts, "Bellefair");
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 2em;
+      }
+      &__bio {
+        color: map-get($colors, "blue-300");
+        text-align: center;
+        margin-top: 1.5rem;
+        line-height: 1.8;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .crew-container {
+    .container {
+      .headline {
+        text-align: left;
+        margin-top: 2.5rem;
+      }
+      .content {
+        &-img {
+          width: 420px;
+        }
+      }
     }
   }
 }
 
 @media screen and (min-width: 1024px) {
   .crew-container {
-    height: 100%;
     max-width: 1100px;
     margin: 0 auto;
-    .content-container {
-      grid-template-columns: repeat(2, 1fr);
-      margin: 0 auto;
-      max-width: 1100px;
-    }
-    .content {
-      &-img {
-        width: 100%;
-        height: auto;
+    .container {
+      .crew--innerNav {
+        margin: 0;
+        gap: 2.5rem;
       }
-      &__bio {
+      .content-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .content > * {
         text-align: left;
+      }
+      .content {
+        &-img {
+          width: 540px;
+        }
+        &__role {
+          font-size: 2em;
+        }
+        &__name {
+          font-size: 3em;
+        }
       }
     }
   }

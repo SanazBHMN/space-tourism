@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
 import axios from "axios";
 
 function DestinationPage() {
@@ -16,7 +17,6 @@ function DestinationPage() {
     (destination) => destination.name.toLowerCase() === name.toLowerCase()
   );
 
-  // console.log(destination);
   return (
     <div className="content-container">
       <div className="content-img">

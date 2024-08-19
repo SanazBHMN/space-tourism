@@ -1,10 +1,12 @@
 import { NavLink } from "react-router-dom";
 
-function InnerLink({ link }) {
-  // console.log(link);
+function InnerLink({ link, pageName }) {
+  // console.log(pageName, link);
   return (
-    <li>
-      <NavLink to={link.toLowerCase()}>{link}</NavLink>
+    <li className="innerNav__item">
+      <NavLink to={link.toLowerCase()}>
+        {pageName === "destination" ? link : "crew" ? "●" : ""}
+      </NavLink>
     </li>
   );
 }
